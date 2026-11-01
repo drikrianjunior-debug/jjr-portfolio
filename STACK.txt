@@ -1,0 +1,40 @@
+STACK TECHNIQUE — CHCJJr. SERI, by VinCi
+==========================================
+
+FRONT-END
+- Vue.js 3 — interface en composants et réactivité
+- TypeScript — typage
+- Vite — serveur de développement et build
+- Motion for Vue (motion-v) — animations d'entrée et de transition légères
+- CSS3 — responsive design, thèmes clair/sombre, transitions et micro-interactions
+- Poppins — Google Fonts, choisie comme correspondance visuelle de la police du CV
+- Lucide Vue Next — icônes SVG légères
+
+BACK-END
+- Node.js
+- Express.js — API REST
+- TypeScript / tsx — exécution des fichiers TypeScript côté serveur
+- JSON Web Token (jsonwebtoken) — session d'administration
+- bcryptjs — hachage des mots de passe
+- CORS — contrôle des origines autorisées
+
+BASE DE DONNÉES
+- Neon — PostgreSQL serverless
+- @neondatabase/serverless — client SQL
+- Table admin : id, email, password_hash, created_at
+- Table realisation : id, name, url, icon, completed_at, stack (JSONB), created_at
+Aucune autre table applicative n'est créée par le script SQL.
+
+OUTILS
+- npm
+- concurrently — démarrage local du client et du serveur
+- dotenv — configuration via variables d'environnement
+- Git / GitHub — versionnement conseillé
+- Vercel (front-end) + Render/Railway (API) + Neon (base) : options de déploiement
+
+COMMANDES
+npm install          Installer les dépendances
+npm run dev          Lancer le client et l'API en développement
+npm run build        Vérifier TypeScript et construire le front-end
+npm run db:setup     Créer les tables admin et realisation
+npm run admin:create Créer/mettre à jour l'admin depuis .env
